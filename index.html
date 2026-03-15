@@ -53,26 +53,32 @@
               >Mobile Number</label
             >
             <input
+              id="input-mobile"
+              value="01630591092"
               maxlength="11"
               minlength="11"
               type="tel"
-              class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-4 text-nutral"
+              class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-4 text-nutral outline-none w-full"
               placeholder="Enter your number"
             />
             <label class="label font-medium text-4 text-nutral"
               >4 Digit Pin</label
             >
             <input
+              id="input-pin"
               maxlength="4"
               minlength="4"
               type="password"
-              class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-4 text-nutral"
+              class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-4 text-nutral outline-none w-full"
               placeholder="Enter 4 Digit Pin"
             />
-            <button class="btn btn-primary mt-4 rounded-[2rem]">Login</button>
+            <button id="login-btn" class="btn btn-primary mt-4 rounded-[2rem]">
+              Login
+            </button>
           </fieldset>
         </div>
       </div>
     </div>
+    <script src="./JS/login.js"></script>
   </body>
 </html>
