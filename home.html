@@ -1,9 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light ">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Payoo | Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!-- Tailwind+DaisyUI CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="min-h-screen max-w-[28.125rem] mx-auto bg-base-200">
+    <section class="border-b-2 border-neutral-200 py-3">
+      <div class="mx-6 flex justify-between items-center">
+        <div class="flex gap-2">
+          <img class="w-[3.75rem]" src="./assets/logo.png" alt="" />
+          <div class="Left space-y-[.375rem]">
+            <h2
+              class="font-extrabold text-[1.125rem] text-[#080808] opacity-90"
+            >
+              $45000
+            </h2>
+            <p class="font-normal text-[.875rem] text-[#080808] opacity-50">
+              Available Balance
+            </p>
+          </div>
+        </div>
+        <div class="Right">
+          <button
+            class="btn rounded-[.5rem] font-normal text-[.875rem] border-neutral-400 opacity-50 text-[#080808]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="currentColor"
+            >
+              <path
+                d="M4 18H6V20H18V4H6V6H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V18ZM6 11H13V13H6V16L1 12L6 8V11Z"
+              ></path></svg
+            >Log out
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
