@@ -34,21 +34,21 @@
       rel="stylesheet"
     />
     <style>
-      * {
+      body {
         font-family: "Outfit", sans-serif;
       }
     </style>
   </head>
   <body class="min-h-screen max-w-[28.125rem] mx-auto bg-base-200">
-    <section class="border-b-2 border-neutral-200 py-3">
-      <div class="mx-6 flex justify-between items-center">
+    <header class="border-b-2 border-neutral-100 py-3">
+      <section class="mx-6 flex justify-between items-center">
         <div class="flex gap-2">
           <img class="w-[3.75rem]" src="./assets/logo.png" alt="" />
-          <div class="Left space-y-[.375rem]">
+          <div class="Left">
             <h2
               class="font-extrabold text-[1.125rem] text-[#080808] opacity-90"
             >
-              $45000
+              $ <span id="balance">45000</span>
             </h2>
             <p class="font-normal text-[.875rem] text-[#080808] opacity-50">
               Available Balance
@@ -56,8 +56,9 @@
           </div>
         </div>
         <div class="Right">
-          <button
-            class="btn rounded-[.5rem] font-normal text-[.875rem] border-neutral-400 opacity-50 text-[#080808]"
+          <a
+            href="./index.html"
+            class="btn btn-error btn-soft hover:text-base-200 rounded-[.5rem] font-normal text-[.875rem] border-neutral-400 text-opacity-40 text-[#080808]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,11 +69,65 @@
             >
               <path
                 d="M4 18H6V20H18V4H6V6H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V18ZM6 11H13V13H6V16L1 12L6 8V11Z"
-              ></path></svg
-            >Log out
+              ></path>
+            </svg>
+            Log out
+          </a>
+        </div>
+      </section>
+    </header>
+    <main class="mx-6">
+      <section
+        class="dashboard pb-6 pt-8 rounded-bl-[1.5rem] rounded-br-[1.5rem]"
+      >
+        <div class="dashboard-text space-y-3">
+          <h2 class="font-bold text-[1.5rem]/[125%] text-[#080808]">
+            Welcome to Pay<span class="text-[#7460FF]">oo</span>
+          </h2>
+          <p class="font-normal text-[1rem] text-[#080808]/50">
+            Enjoy easy and convenient financial services with us. <br />
+            Cashout charge is low and
+          </p>
+        </div>
+        <div class="dashboard-cards grid grid-cols-3 gap-[1.0313rem] mt-6">
+          <button
+            class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
+          >
+            <img class="" src="./assets/opt-1.png" alt="" />
+            <p class="">Add Money</p>
+          </button>
+          <button
+            class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
+          >
+            <img class="" src="./assets/opt-2.png" alt="" />
+            <p class="">Cashout</p>
+          </button>
+          <button
+            class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
+          >
+            <img class="" src="./assets/opt-3.png" alt="" />
+            <p class="">Transfer Money</p>
+          </button>
+          <button
+            class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
+          >
+            <img class="" src="./assets/opt-4.png" alt="" />
+            <p class="">Get Bonus</p>
+          </button>
+          <button
+            class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
+          >
+            <img class="" src="./assets/opt-5.png" alt="" />
+            <p class="">Pay Bill</p>
+          </button>
+          <button
+            class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
+          >
+            <img class="" src="./assets/opt-6.png" alt="" />
+            <p class="">Transactions</p>
           </button>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   </body>
 </html>
