@@ -1,7 +1,18 @@
 // Credential
-export const accountNumber = "01630591092";
-export const pin = "2061";
+const accountNumber = "01630591092";
+const pin = "2061";
 // Utils
-export function getValueById(id) {
+
+//Show the current balance
+const currentBalance = () =>
+  Number(document.getElementById("balance").innerText);
+
+//Sets new Balance
+const setBalance = (value) =>
+  (document.getElementById("balance").innerHTML = value);
+function getValueById(id) {
   return document.getElementById(id).value;
 }
+
+//Export them all
+export { accountNumber, pin, currentBalance, setBalance, getValueById };

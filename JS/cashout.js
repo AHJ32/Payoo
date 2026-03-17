@@ -1,5 +1,11 @@
 // Credentials
-import { accountNumber, pin, getValueById } from "./config.js";
+import {
+  accountNumber,
+  pin,
+  getValueById,
+  setBalance,
+  currentBalance,
+} from "./config.js";
 
 //Error sound
 const errorSound = new Audio("Viral FAAH Sound.mp3");
@@ -7,9 +13,8 @@ document.getElementById("withdraw-btn").addEventListener("click", () => {
   // Agent number fetch
   const agentNumber = getValueById("input-agent");
   // amount fetch
-  const amount = getValueById("input-amount");
-  //Current balance fetch
-  let currentBalance = document.getElementById("balance").innerText;
+  const amount = Number(getValueById("input-amount"));
+
   //Pin fetch
   const cashoutPin = getValueById("input-cashout-pin");
   //Agent number validation
@@ -18,7 +23,7 @@ document.getElementById("withdraw-btn").addEventListener("click", () => {
     return;
   }
   // amount validation
-  if (amount <= 0 || amount > currentBalance) {
+  if (amount <= 0 || amount > currentBalance()) {
     errorSound.play();
     return;
   }
@@ -27,8 +32,8 @@ document.getElementById("withdraw-btn").addEventListener("click", () => {
     errorSound.play();
   } else {
     //calc
-    const updatedBalance = Number(currentBalance) - Number(amount);
+    const updatedBalance = currentBalance() - amount;
     //Updating the new balance
-    document.getElementById("balance").innerText = updatedBalance;
+    setBalance(updatedBalance);
   }
 });
