@@ -136,10 +136,26 @@
               <div class="space-y-[.75rem]">
                 <label
                   class="label font-semibold text-[1rem] text-[#080808] opacity-70"
-                  >Agent Number</label
+                  >Select A Bank</label
+                >
+
+                <select
+                  id="add-money-bank"
+                  class="select w-full rounded-[2rem] border-none bg-[#f4f5f7] outline-none font-light text-[1rem] text-nutral text-opacity-40"
+                >
+                  <option disabled selected>Select Bank</option>
+                  <option value="EBL">EBL</option>
+                  <option value="DBBL">DBBL</option>
+                  <option value="City Bank">City Bank</option>
+                </select>
+
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Bank Account Number</label
                 >
                 <input
-                  id="input-agent"
+                  id="add-money-number"
+                  value="01630591092"
                   maxlength="11"
                   minlength="11"
                   type="tel"
@@ -151,10 +167,10 @@
               <div class="space-y-[.75rem]">
                 <label
                   class="label font-semibold text-[1rem] text-[#080808] opacity-70"
-                  >Amount</label
+                  >Amount to Add</label
                 >
                 <input
-                  id="input-amount"
+                  id="add-money-amount"
                   type="number"
                   class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full"
                   placeholder="Enter amount to withdraw"
@@ -167,7 +183,7 @@
                   >Pin Number</label
                 >
                 <input
-                  id="input-cashout-pin"
+                  id="add-money-pin"
                   maxlength="4"
                   minlength="4"
                   type="password"
@@ -177,16 +193,16 @@
                 />
               </div>
               <button
-                id="withdraw-btn"
+                id="add-money-btn"
                 class="btn btn-primary mt-4 rounded-[2rem] font-semibold text-[1.25rem] text-center py-[.875rem] h-[3.3125rem]"
               >
-                Withdraw Money
+                Add Money
               </button>
             </fieldset>
           </div>
         </div>
       </section>
-      <section id="cashout" class="py-5 space-y-4">
+      <section id="cashout" class="py-5 space-y-4 hidden">
         <h2 class="font-semibold text-[1.125rem]">Cash Out</h2>
         <div class="card bg-base-100 w-full rounded-3xl">
           <div class="card-body">
