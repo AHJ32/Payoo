@@ -4,7 +4,7 @@ const pin = "2061";
 // Utils
 //Error Sound
 const errorSound = () => {
-  const error = new Audio("Viral FAAH Sound.mp3");
+  const error = new Audio("./assets/Viral FAAH Sound.mp3");
   return error.play();
 };
 
