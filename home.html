@@ -123,6 +123,7 @@
             <p class="">Get Bonus</p>
           </button>
           <button
+            id="pay-bill"
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-5.png" alt="" />
@@ -365,10 +366,88 @@
           </div>
         </div>
       </section>
+      <section
+        id="pay-bill-section"
+        class="py-5 space-y-4 hidden toggleable-section"
+      >
+        <h2 class="font-semibold text-[1.125rem]">Pay Bill</h2>
+        <div class="card bg-base-100 w-full rounded-3xl">
+          <div class="card-body">
+            <fieldset class="fieldset space-y-4">
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Select To Pay</label
+                >
+
+                <select
+                  id="pay-bill-service"
+                  class="select w-full rounded-[2rem] border-none bg-[#f4f5f7] outline-none font-light text-[1rem] text-nutral text-opacity-40"
+                  required
+                >
+                  <option disabled selected>Select Service</option>
+                  <option value="Wifi">Wifi</option>
+                  <option value="Wasa">Wasa</option>
+                  <option value="Electricity">Electricity</option>
+                </select>
+
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Biller Account Number</label
+                >
+                <input
+                  id="pay-bill-number"
+                  maxlength="11"
+                  minlength="11"
+                  type="tel"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full py-4 pl-[1.25rem]"
+                  placeholder="Enter 11 digit number"
+                  required
+                />
+              </div>
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Amount to pay</label
+                >
+                <input
+                  id="pay-bill-amount"
+                  type="number"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full"
+                  placeholder="Enter amount to pay"
+                  required
+                />
+              </div>
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Pin Number</label
+                >
+                <input
+                  id="pay-bill-pin"
+                  maxlength="4"
+                  minlength="4"
+                  type="password"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full"
+                  placeholder="Enter 4 digit pin number"
+                  required
+                />
+              </div>
+              <button
+                id="pay-bill-btn"
+                class="btn btn-primary mt-4 rounded-[2rem] font-semibold text-[1.25rem] text-center py-[.875rem] h-[3.3125rem]"
+              >
+                Add Money
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </section>
     </main>
     <script type="module" src="./JS/addMoney.js"></script>
     <script type="module" src="./JS/cashout.js"></script>
     <script type="module" src="./JS/transferMoney.js"></script>
     <script type="module" src="./JS/getBonus.js"></script>
+    <script type="module" src="./JS/payBill.js"></script>
   </body>
 </html>
