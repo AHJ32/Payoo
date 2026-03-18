@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en" data-theme="light ">
+<html
+  lang="en"
+  data-theme="light "
+  class="scroll-smooth overflow-y-auto scrollbar-hide"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,7 +43,7 @@
       }
     </style>
   </head>
-  <body class="min-h-screen max-w-[28.125rem] mx-auto bg-base-200">
+  <body class="min-h-dvh max-w-[28.125rem] mx-auto bg-base-200">
     <header class="border-b-2 border-neutral-100 py-3 sticky top-0 z-10 glass">
       <section class="mx-6 flex justify-between items-center">
         <div class="flex gap-2">
@@ -91,12 +95,14 @@
         </div>
         <div class="dashboard-cards grid grid-cols-3 gap-[1.0313rem] mt-6">
           <button
+            id="add-money"
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-1.png" alt="" />
             <p class="">Add Money</p>
           </button>
           <button
+            id="cashout-btn"
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-2.png" alt="" />
@@ -128,7 +134,7 @@
           </button>
         </div>
       </section>
-      <section id="addMoney" class="py-5 space-y-4">
+      <section id="add-money-section" class="py-5 space-y-4 hidden">
         <h2 class="font-semibold text-[1.125rem]">Add Money</h2>
         <div class="card bg-base-100 w-full rounded-3xl">
           <div class="card-body">

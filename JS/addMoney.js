@@ -8,6 +8,11 @@ import {
   errorSound,
 } from "./config.js";
 
+//Make the section visible
+document.getElementById("add-money").addEventListener("click", () => {
+  document.getElementById("add-money-section").classList.remove("hidden");
+});
+
 document.getElementById("add-money-btn").addEventListener("click", () => {
   //Bank fetch
   const bank = getValueById("add-money-bank");

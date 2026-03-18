@@ -8,7 +8,11 @@ import {
   errorSound,
 } from "./config.js";
 
-//Error sound
+//Make the section visible
+document.getElementById("cashout-btn").addEventListener("click", () => {
+  document.getElementById("cashout").classList.remove("hidden");
+});
+
 document.getElementById("withdraw-btn").addEventListener("click", () => {
   // Agent number fetch
   const agentNumber = getValueById("input-agent");
