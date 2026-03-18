@@ -109,12 +109,14 @@
             <p class="">Cashout</p>
           </button>
           <button
+            id="transfer-money"
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-3.png" alt="" />
             <p class="">Transfer Money</p>
           </button>
           <button
+            id="get-bonus"
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-4.png" alt="" />
@@ -165,7 +167,6 @@
                 >
                 <input
                   id="add-money-number"
-                  value="01630591092"
                   maxlength="11"
                   minlength="11"
                   type="tel"
@@ -183,7 +184,7 @@
                   id="add-money-amount"
                   type="number"
                   class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full"
-                  placeholder="Enter amount to withdraw"
+                  placeholder="Enter amount to Add"
                   required
                 />
               </div>
@@ -270,8 +271,104 @@
           </div>
         </div>
       </section>
+      <section
+        id="transfer-money-section"
+        class="py-5 space-y-4 hidden toggleable-section"
+      >
+        <h2 class="font-semibold text-[1.125rem]">Transfer Money</h2>
+        <div class="card bg-base-100 w-full rounded-3xl">
+          <div class="card-body">
+            <fieldset class="fieldset space-y-4">
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >User Account Number</label
+                >
+                <input
+                  id="transfer-user-account-number"
+                  maxlength="11"
+                  minlength="11"
+                  type="tel"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full py-4 pl-[1.25rem]"
+                  placeholder="Enter 11 digit number"
+                  required
+                />
+              </div>
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Amount</label
+                >
+                <input
+                  id="transfer-amount"
+                  type="number"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full"
+                  placeholder="Enter amount to transfer"
+                  required
+                />
+              </div>
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Pin Number</label
+                >
+                <input
+                  id="transfer-pin"
+                  maxlength="4"
+                  minlength="4"
+                  type="password"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full"
+                  placeholder="Enter 4 digit pin number"
+                  required
+                />
+              </div>
+              <button
+                id="send-now-btn"
+                class="btn btn-primary mt-4 rounded-[2rem] font-semibold text-[1.25rem] text-center py-[.875rem] h-[3.3125rem]"
+              >
+                Send Now
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+      <section
+        id="get-bonus-section"
+        class="py-5 space-y-4 hidden toggleable-section"
+      >
+        <h2 class="font-semibold text-[1.125rem]">Get Bonus</h2>
+        <div class="card bg-base-100 w-full rounded-3xl">
+          <div class="card-body">
+            <fieldset class="fieldset space-y-4">
+              <div class="space-y-[.75rem]">
+                <label
+                  class="label font-semibold text-[1rem] text-[#080808] opacity-70"
+                  >Enter Bonus Coupon</label
+                >
+                <input
+                  id="transfer-user-account-number"
+                  maxlength="6"
+                  minlength="6"
+                  type="tel"
+                  class="input rounded-[2rem] border-none bg-[#f4f5f7] placeholder-opacity-40 font-light text-[1rem] text-nutral outline-none w-full py-4 pl-[1.25rem]"
+                  placeholder="Enter your coupon"
+                  required
+                />
+              </div>
+              <button
+                id="get-bonus-btn"
+                class="btn btn-primary mt-4 rounded-[2rem] font-semibold text-[1.25rem] text-center py-[.875rem] h-[3.3125rem]"
+              >
+                Get Bonus
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </section>
     </main>
-    <script type="module" src="./JS/cashout.js"></script>
     <script type="module" src="./JS/addMoney.js"></script>
+    <script type="module" src="./JS/cashout.js"></script>
+    <script type="module" src="./JS/transferMoney.js"></script>
+    <script type="module" src="./JS/getBonus.js"></script>
   </body>
 </html>
