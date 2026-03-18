@@ -5,10 +5,10 @@ import {
   getValueById,
   setBalance,
   currentBalance,
+  errorSound,
 } from "./config.js";
 
 //Error sound
-const errorSound = new Audio("Viral FAAH Sound.mp3");
 document.getElementById("withdraw-btn").addEventListener("click", () => {
   // Agent number fetch
   const agentNumber = getValueById("input-agent");
@@ -19,17 +19,17 @@ document.getElementById("withdraw-btn").addEventListener("click", () => {
   const cashoutPin = getValueById("input-cashout-pin");
   //Agent number validation
   if (agentNumber == accountNumber) {
-    errorSound.play();
+    errorSound();
     return;
   }
   // amount validation
   if (amount <= 0 || amount > currentBalance()) {
-    errorSound.play();
+    errorSound();
     return;
   }
   //Pin validation
   if (cashoutPin !== pin) {
-    errorSound.play();
+    errorSound();
   } else {
     //calc
     const updatedBalance = currentBalance() - amount;
