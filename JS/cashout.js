@@ -6,13 +6,13 @@ import {
   setBalance,
   currentBalance,
   errorSound,
+  showSection,
 } from "./config.js";
 
 //Make the section visible
 document.getElementById("cashout-btn").addEventListener("click", () => {
-  document.getElementById("cashout").classList.remove("hidden");
+  showSection("cashout");
 });
-
 document.getElementById("withdraw-btn").addEventListener("click", () => {
   // Agent number fetch
   const agentNumber = getValueById("input-agent");

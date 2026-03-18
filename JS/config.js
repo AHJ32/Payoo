@@ -19,6 +19,20 @@ function getValueById(id) {
   return document.getElementById(id).value;
 }
 
+//visibility
+function showSection(sectionId) {
+  const allToggleableSections = document.querySelectorAll(
+    ".toggleable-section",
+  );
+  allToggleableSections.forEach((section) => {
+    section.classList.add("hidden");
+  });
+
+  const targetSection = document.getElementById(sectionId);
+  if (targetSection) {
+    targetSection.classList.remove("hidden");
+  }
+}
 //Export them all
 export {
   accountNumber,
@@ -27,4 +41,5 @@ export {
   setBalance,
   getValueById,
   errorSound,
+  showSection,
 };
