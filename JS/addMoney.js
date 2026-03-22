@@ -7,6 +7,7 @@ import {
   currentBalance,
   errorSound,
   showSection,
+  showHistory,
 } from "./config.js";
 
 //Make the section visible
@@ -47,4 +48,6 @@ document.getElementById("add-money-btn").addEventListener("click", () => {
   const updatedBalance = currentBalance() + addMoneyAmount;
   //Updating the new balance
   setBalance(updatedBalance);
+  //creating transaction history
+  showHistory("transaction-container", "add-money-text");
 });

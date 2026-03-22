@@ -7,6 +7,7 @@ import {
   currentBalance,
   errorSound,
   showSection,
+  showHistory,
 } from "./config.js";
 
 //Make the section visible
@@ -34,10 +35,13 @@ document.getElementById("withdraw-btn").addEventListener("click", () => {
   //Pin validation
   if (cashoutPin !== pin) {
     errorSound();
-  } else {
-    //calc
-    const updatedBalance = currentBalance() - amount;
-    //Updating the new balance
-    setBalance(updatedBalance);
+    return;
   }
+  //calc
+  const updatedBalance = currentBalance() - amount;
+  //Updating the new balance
+  setBalance(updatedBalance);
+
+  //creating transaction history
+  showHistory("transaction-container", "cashout-btn");
 });

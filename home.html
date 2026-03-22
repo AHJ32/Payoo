@@ -99,7 +99,7 @@
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-1.png" alt="" />
-            <p class="">Add Money</p>
+            <p id="add-money-text" class="">Add Money</p>
           </button>
           <button
             id="cashout-btn"
@@ -130,6 +130,7 @@
             <p class="">Pay Bill</p>
           </button>
           <button
+            id="transaction-btn"
             class="btn px-[1.625rem] py-5 flex-col h-full rounded-[.75rem] btn-primary btn-soft"
           >
             <img class="" src="./assets/opt-6.png" alt="" />
@@ -443,11 +444,26 @@
           </div>
         </div>
       </section>
+      <section
+        id="transaction"
+        class="py-5 space-y-4 hidden toggleable-section"
+      >
+        <div class="flex justify-between items-center">
+          <h2 class="font-semibold text-[1.125rem]">Transaction History</h2>
+          <button
+            class="font-normal text-[.875rem] text-[#080808]/50 cursor-pointer"
+          >
+            View All
+          </button>
+        </div>
+        <div class="space-y-[.75rem]" id="transaction-container"></div>
+      </section>
     </main>
     <script type="module" src="./JS/addMoney.js"></script>
     <script type="module" src="./JS/cashout.js"></script>
     <script type="module" src="./JS/transferMoney.js"></script>
     <script type="module" src="./JS/getBonus.js"></script>
     <script type="module" src="./JS/payBill.js"></script>
+    <script type="module" src="./JS/transaction.js"></script>
   </body>
 </html>

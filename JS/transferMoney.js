@@ -7,6 +7,7 @@ import {
   currentBalance,
   errorSound,
   showSection,
+  showHistory,
 } from "./config.js";
 
 //Make the section visible
@@ -34,10 +35,12 @@ document.getElementById("send-now-btn").addEventListener("click", () => {
   //Pin validation
   if (transferPin !== pin) {
     errorSound();
-  } else {
-    //calc
-    const updatedBalance = currentBalance() - transferAmount;
-    //Updating the new balance
-    setBalance(updatedBalance);
+    return;
   }
+  //calc
+  const updatedBalance = currentBalance() - transferAmount;
+  //Updating the new balance
+  setBalance(updatedBalance);
+  //creating transaction history
+  showHistory("transaction-container", "transfer-money");
 });
