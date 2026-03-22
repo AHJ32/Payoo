@@ -43,5 +43,5 @@ document.getElementById("withdraw-btn").addEventListener("click", () => {
   setBalance(updatedBalance);
 
   //creating transaction history
-  showHistory("transaction-container", "cashout-btn");
+  showHistory("transaction-container", "cashout-btn", "./assets/opt-2.png");
 });

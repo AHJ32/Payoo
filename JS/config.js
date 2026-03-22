@@ -34,7 +34,7 @@ function showSection(sectionId) {
   }
 }
 //Showing transaction history
-function showHistory(id, id2) {
+function showHistory(id, id2, image) {
   const history = document.getElementById(id);
   const newHistory = document.createElement("div");
 
@@ -42,7 +42,7 @@ function showHistory(id, id2) {
   <div class= "flex justify-between items-center bg-base-100 rounded-[.75rem] py-[.8125rem] pl-[1rem]">
     <div class="transaction-container-left flex gap-[.5rem] items-center">
       <div class="p-[.6875rem] bg-base-200 rounded-full">
-        <img src="./assets/opt-5.png" alt="" />
+        <img src=${image} alt="" />
       </div>
       <div id="transaction-container-text" class="">
         <h2 class="font-semibold text-[1rem] text-[#080808]/70">

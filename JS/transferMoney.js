@@ -42,5 +42,5 @@ document.getElementById("send-now-btn").addEventListener("click", () => {
   //Updating the new balance
   setBalance(updatedBalance);
   //creating transaction history
-  showHistory("transaction-container", "transfer-money");
+  showHistory("transaction-container", "transfer-money", "./assets/opt-3.png");
 });

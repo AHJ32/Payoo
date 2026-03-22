@@ -49,5 +49,5 @@ document.getElementById("pay-bill-btn").addEventListener("click", () => {
   //Updating the new balance
   setBalance(updatedBalance);
   //creating transaction history
-  showHistory("transaction-container", "add-money-text");
+  showHistory("transaction-container", "pay-bill", "./assets/opt-5.png");
 });
